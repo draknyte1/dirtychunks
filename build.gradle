@@ -16,9 +16,18 @@ buildscript {
 }
 apply plugin: 'net.minecraftforge.gradle.forge'
 
-version = "1.0"
-group = "com.yourname.modid"
-archivesBaseName = "modid"
+version = "0.1"
+group = "net.alkalus.dirtychunks"
+archivesBaseName = "dirtychunks"
+
+sourceSets
+{
+main
+{
+java { srcDirs = ["$projectDir/src/java"] }
+resources { srcDirs = ["$projectDir/src/resources"] }
+}
+}
 
 sourceCompatibility = targetCompatibility = "1.6"
 
@@ -29,9 +38,8 @@ compileJava {
 
 minecraft {
 
-    version = "1.10.2-12.18.2.2118"
+    version = "1.7.10-10.13.4.1448-1.7.10"
     runDir = "run"
-    mappings = "snapshot_20160518"
     useDepAts = true
 }
 

@@ -13,10 +13,10 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.event.FMLServerStoppingEvent;
+import net.minecraftforge.common.MinecraftForge;
 
 @Mod(modid=CORE.MODID, name=CORE.NAME, version=CORE.VERSION, dependencies="required-after:Forge;")
-public class DirtyChunks
-implements ActionListener
+public class DirtyChunks implements ActionListener
 {
 
 	@Mod.Instance(CORE.MODID)
@@ -30,6 +30,7 @@ implements ActionListener
 	public void preInit(final FMLPreInitializationEvent event)
 	{
 		Utils.LOG_INFO("Loading "+CORE.NAME+" - V"+CORE.VERSION);
+		MinecraftForge.EVENT_BUS.register(new ChunkLoadEvent());
 		proxy.preInit(event);
 	}
 
@@ -64,4 +65,5 @@ implements ActionListener
 	public void actionPerformed(final ActionEvent arg0) {
 
 	}
+	
 }
