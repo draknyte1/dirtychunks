@@ -1,4 +1,4 @@
-package dirtychunks.proxy;
+package java.dirtychunks.proxy;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;

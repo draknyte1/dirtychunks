@@ -1,4 +1,4 @@
-package dirtychunks.utils;
+package java.dirtychunks.utils;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

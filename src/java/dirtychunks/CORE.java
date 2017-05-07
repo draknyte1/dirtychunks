@@ -1,4 +1,4 @@
-package dirtychunks;
+package java.dirtychunks;
 
 public class CORE {
 
